@@ -301,7 +301,7 @@ exec 'highlight SignColumn guibg=bg guifg=' . s:green
 exec 'highlight Todo guibg=' . s:deep_blue . ' guifg=' . s:yellow
 exec 'highlight SpecialKey guibg=bg guifg=' . s:blue
 if g:nightflyUnderlineMatchParen
-    exec 'highlight MatchParen guibg=bg gui=underline'
+    exec 'highlight MatchParen guibg=' . s:steel_blue . ' gui=underline'
 else
     highlight! link MatchParen NightflyVisual
 endif
