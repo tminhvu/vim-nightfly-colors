@@ -128,14 +128,14 @@ exec 'highlight NightflyIndigo guifg=' . s:indigo
 exec 'highlight NightflyTurquoise guifg=' . s:turquoise
 exec 'highlight NightflyEmerald guifg=' . s:emerald
 exec 'highlight NightflyGreen guifg=' . s:green
-exec 'highlight NightflyWhiteAlert guibg=bg guifg=' . s:white
-exec 'highlight NightflyCadetBlueAlert guibg=bg guifg=' . s:cadet_blue
-exec 'highlight NightflyYellowAlert guibg=bg guifg=' . s:yellow
-exec 'highlight NightflyOrangeAlert guibg=bg guifg=' . s:orange
-exec 'highlight NightflyRedAlert guibg=bg guifg=' . s:red
-exec 'highlight NightflyPurpleAlert guibg=bg guifg=' . s:purple
-exec 'highlight NightflyBlueAlert guibg=bg guifg=' . s:blue
-exec 'highlight NightflyEmeraldAlert guibg=bg guifg=' . s:emerald
+exec 'highlight NightflyWhiteAlert guibg=bg guifg=' . s:white . ' gui=bold'
+exec 'highlight NightflyCadetBlueAlert guibg=bg guifg=' . s:cadet_blue . ' gui=bold'
+exec 'highlight NightflyYellowAlert guibg=bg guifg=' . s:yellow . ' gui=bold'
+exec 'highlight NightflyOrangeAlert guibg=bg guifg=' . s:orange . ' gui=bold'
+exec 'highlight NightflyRedAlert guibg=bg guifg=' . s:red . ' gui=bold'
+exec 'highlight NightflyPurpleAlert guibg=bg guifg=' . s:purple . ' gui=bold'
+exec 'highlight NightflyBlueAlert guibg=bg guifg=' . s:blue . ' gui=bold'
+exec 'highlight NightflyEmeraldAlert guibg=bg guifg=' . s:emerald . ' gui=bold'
 exec 'highlight NightflyUnderline gui=underline'
 exec 'highlight NightflyNoCombine gui=nocombine'
 " Statusline helper colors
@@ -161,7 +161,7 @@ exec 'highlight NightflyDiagnosticUndercurlHint gui=undercurl guisp=' . s:white
 exec 'highlight NightflyDiagnosticUnderlineError gui=underline guisp=' . s:red
 exec 'highlight NightflyDiagnosticUnderlineWarn gui=underline guisp=' . s:yellow
 exec 'highlight NightflyDiagnosticUnderlineInfo gui=underline guisp=' . s:blue
-exec 'highlight NightflyDiagnosticUnderlineHint gui=underline guisp=' . s:white
+exec 'highlight NightflyDiagnosticUnderlineHint gui=underline guisp=' . s:emerald
 
 "-----------------------------------------------------------------------
 " Core styling
@@ -237,7 +237,6 @@ exec 'highlight Statement guifg=' . s:violet . ' gui=none'
 highlight! link Structure NightflyIndigo
 
 " Statusline, splits and tab lines
-exec 'highlight StatusLine cterm=none guibg=' . s:slate_blue . ' guifg=' . s:white . ' gui=none'
 exec 'highlight StatusLineNC cterm=none guibg=' . s:slate_blue . ' guifg=' . s:cadet_blue . ' gui=none'
 exec 'highlight Tabline cterm=none guibg=' . s:slate_blue . ' guifg=' . s:cadet_blue . ' gui=none'
 exec 'highlight TablineSel cterm=none guibg=' . s:dark_blue . ' guifg=' . s:blue . ' gui=none'
@@ -937,7 +936,7 @@ if !exists('g:indentLine_defaultGroup') && !exists('g:indentLine_color_gui')
     let g:indentLine_color_gui = s:deep_blue
 endif
 
-" Neovim only plugins 
+" Neovim only plugins
 if has('nvim-0.7')
     lua require("nightfly").plugins()
 elseif has('nvim-0.6')
