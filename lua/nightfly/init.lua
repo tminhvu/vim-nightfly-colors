@@ -25,6 +25,7 @@ local yellow = "#e3d18a"
 local peach = "#ffcb8b"
 local tan = "#ecc48d"
 local orange = "#f78c6c"
+local orchid = '#e39aa6'
 local red = "#fc514e"
 local watermelon = "#ff5874"
 local violet = "#c792ea"
@@ -71,7 +72,7 @@ M.core = function()
     highlight(0, "@keyword.operator", { link = "NightflyViolet" })
     highlight(0, "@namespace", { link = "NightflyTurquoise" })
     highlight(0, "@none", {})
-    highlight(0, "@parameter", { link = "NightflyWhite" })
+    highlight(0, "@parameter", { link = "NightflyOrchid" })
     highlight(0, "@punctuation.special", { link = "NightflyWatermelon" })
     highlight(0, "@punctuation.bracket", { link = "NightflyGreyBlue" })
     highlight(0, "@string.regex", { link = "NightflyTurquoise" })
@@ -96,6 +97,7 @@ M.core = function()
     highlight(0, "@text.underline", { underline = true })
     highlight(0, "@text.uri", { link = "NightflyPurple" })
     highlight(0, "@text.warning", { link = "NightflyYellowAlert" })
+    highlight(0, "@variable", { link = "NightflyWhite" })
     highlight(0, "@variable.builtin", { link = "NightflyGreen" })
     -- Language specific overrides.
     highlight(0, "@parameter.bash", { link = "NightflyTurquoise" })
@@ -143,28 +145,20 @@ end
 
 M.plugins = function()
     -- NvimTree plugin
+    -- NvimTree plugin
     highlight(0, "NvimTreeFolderIcon", { link = "NightflyBlue" })
     highlight(0, "NvimTreeFolderName", { link = "NightflyBlue" })
-    highlight(0, "NvimTreeIndentMarker", { link = "NightflySlateBlue" })
+    highlight(0, "NvimTreeIndentMarker", { link = "NightflyPickleBlue" })
     highlight(0, "NvimTreeOpenedFolderName", { link = "NightflyBlue" })
     highlight(0, "NvimTreeRootFolder", { link = "NightflyPurple" })
     highlight(0, "NvimTreeSpecialFile", { link = "NightflyYellow" })
     highlight(0, "NvimTreeWindowPicker", { link = "DiffChange" })
+    highlight(0, "NvimTreeCursorLine", { bg = deep_blue })
     highlight(0, "NvimTreeExecFile", { fg = green })
     highlight(0, "NvimTreeImageFile", { fg = violet })
+    highlight(0, "NvimTreeNormal", { bg = black_blue, fg = white })
     highlight(0, "NvimTreeOpenedFile", { fg = yellow })
     highlight(0, "NvimTreeSymlink", { fg = turquoise })
-
-    -- Neo-tree plugin
-    -- highlight(0, "NeoTreeDimText", { link = "NightflyDeepBlue" })
-    -- highlight(0, "NeoTreeDotfile", { link = "NightflySlateBlue" })
-    -- highlight(0, "NeoTreeGitAdded", { link = "NightflyGreen" })
-    -- highlight(0, "NeoTreeGitConflict", { link = "NightflyWatermelon" })
-    -- highlight(0, "NeoTreeGitModified", { link = "NightflyViolet" })
-    -- highlight(0, "NeoTreeGitUntracked", { link = "NightflySteelBlue" })
-    -- highlight(0, "NeoTreeMessage", { link = "NightflyCadetBlue" })
-    -- highlight(0, "NeoTreeModified", { link = "NightflyYellow" })
-    -- highlight(0, "NeoTreeRootName", { link = "NightflyPurple" })
 
     -- Telescope plugin
     highlight(0, "TelescopeBorder", { link = "NightflySlateBlue" })
